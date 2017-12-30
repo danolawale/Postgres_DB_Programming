@@ -1,5 +1,9 @@
 --SELECT CURRENT_TIMESTAMP AS date, EXTRACT(DOW FROM CURRENT_TIMESTAMP) AS DOW;
 
+--A flexible way to control triggers is to use a generic WHEN clause that is similar to WHERE in SQL queries
+--With a WHEN clause, you can write any expression, except a subquery, that is tested before the trigger function is called
+--The expression must result in boolean. If it returns false, the trigger function is not called.
+
 --Conditional triggers with the WHEN clause
 CREATE OR REPLACE FUNCTION cancel_with_message()
 RETURNS TRIGGER AS $$
