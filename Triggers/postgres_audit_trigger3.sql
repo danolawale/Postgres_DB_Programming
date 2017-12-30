@@ -25,7 +25,7 @@ CREATE TABLE modify_test (
    FOR EACH ROW
    EXECUTE PROCEDURE changestamp();
 
-   DROP TRIGGER changestamp ON modify_test
+  -- DROP TRIGGER changestamp ON modify_test
    INSERT INTO modify_test(data) VALUES('something');
    INSERT INTO modify_test(data) VALUES('Peace');
 
@@ -34,4 +34,7 @@ CREATE TABLE modify_test (
    UPDATE modify_test SET data = 'Something Wild' WHERE id = 1;
     UPDATE modify_test SET data = 'Peace Loving' WHERE id = 2;
 
-   SELECT * FROM modify_test
+   SELECT * FROM modify_test;
+ 
+   DROP TRIGGER changestamp ON modify_test;
+

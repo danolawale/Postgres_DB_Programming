@@ -29,3 +29,5 @@ UPDATE modify_test SET created_by = 'notpostgres';
 
 SELECT * FROM modify_test;
 --NB: created_by is as set in the trigger function
+
+DROP TRIGGER usagestamp ON modify_test;
